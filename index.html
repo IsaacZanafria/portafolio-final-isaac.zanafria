@@ -9,39 +9,47 @@
   </head>
   <body>
     <!-- MENU -->
-    <section class="h-1 w-full sticky top-0"
+    <section class="h-1 w-full sticky top-0 "
         <div class="h-full absolute z-20 bg-transparent">
-        <div class="h-170 w-full bg-white flex items-center justify-center">
+        <div class="h-160 md:h-146 w-full bg-white flex items-center justify-center">
             <div class="w-9/10 h-[95%]  flex flex-col justify-between">
             <!-- TEXTO-->
             <div class="h-1/10 flex justify-between items-center bg-amber-100">
-                <h2 class="font-sans font-bold text-sm tracking-tight text-gray-800">Edit your search</h2>
+                <h2 class="font-sans font-bold text-sm md:text-base tracking-tight text-gray-800">Edit your search</h2>
                 <span class="font-sans font-bold text-4xl tracking-tight text-gray-800 pb-4">&times;</span>
             </div>
+
             <!--FORM-->
             <form class="h-9/10 flex flex-col items-center bg-amber-200" id="contactForm">
             
-            <div class="w-full flex flex-col">
+            <div class="w-full flex flex-col md:flex-row md:flex-wrap">
                 <!--LOCATION-->
-                <div class="w-full h-15 flex flex-col items-center justify-center border border-gray-200 rounded-t-3xl hover:bg-gray-100 hover:border-gray-800 focus-within:border-gray-800 cursor-pointer">
+                <div class="w-full md:w-1/2 h-15 flex flex-col items-center justify-center border border-gray-200 rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl shadow-lg hover:bg-gray-100 hover:border-gray-800 focus-within:border-gray-800 cursor-pointer">
                     <label class="w-9/10 font-sans font-bold text-sm tracking-tight text-gray-800 cursor-pointer" for="factura">LOCATION</label>
                     <input class="w-9/10 font-sans  tracking-tight border-0 outline-none" value="" type="text" id="location" name="location" placeholder="Add location">
                 </div>
                 <!--GUESTS-->
-                <div class="w-full h-15 flex flex-col items-center justify-center mb-5 border border-gray-200 rounded-b-3xl shadow-lg hover:bg-gray-100 hover:border-gray-800 focus-within:border-gray-800 active:border-gray-800 cursor-pointer">
+                <div class="w-full md:w-1/2 h-15 flex flex-col items-center justify-center mb-5 border border-gray-200 rounded-b-3xl md:rounded-bl-none md:rounded-r-3xl shadow-lg hover:bg-gray-100 hover:border-gray-800 focus-within:border-gray-800 active:border-gray-800 cursor-pointer">
                     <label class="w-9/10 font-sans font-bold text-sm tracking-tight text-gray-800 cursor-pointer" for="descripcion">GUESTS</label>
                     <input class="w-9/10 font-sans tracking-tight border-0 outline-none cursor-pointer" value="" type="text" id="guests" name="guests" placeholder="Add guests" disabled>
                 </div>
+                <!--UBICACIONES-->
+                <div class="bg-blue-500 w-full md:w-1/2 h-90 ">
+                  <ul class="flex flex-col gap-2">
+                      <li class="flex gap-2 ml-2 font-sans font-semibold tracking-tight text-gray-600 hover:text-gray-800 active:text-gray-950 cursor-pointer "><svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="19" height="22"><path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg> Helsinki, Finland </li>
+                      <li class="flex gap-2 ml-2 font-sans font-semibold tracking-tight text-gray-600 hover:text-gray-800 active:text-gray-950 cursor-pointer "><svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="19" height="22"><path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg> Helsinki, Finland </li>    
+                  </ul>
+              </div>
                 <!--ADULTOS Y NIÑOS-->    
-                <div class="bg-blue-200 w-full h-70 flex flex-col gap-6 pl-3" hidden>
+                <div class="bg-blue-200 w-full md:w-1/2 h-70 flex flex-col gap-6 pl-3 hidden md:block" >
                     <!--ADULTS-->
                     <div>
                         <h4 class="font-sans font-semibold tracking-tight text-gray-800">Adults</h4>
                         <p class="font-sans  text-sm tracking-tight text-gray-500">Ages 13 or above</p>
                         <div class="flex justify-center w-31 mt-3">
-                            <button class="w-7 border border-gray-600 rounded-sm bg-gray-200 hover:bg-gray-300 cursor-pointer" type="button">-</button>
+                            <button class="w-7 border border-gray-600 rounded-sm bg-gray-200 hover:bg-gray-300 active:bg-gray-400 cursor-pointer" type="button">-</button>
                             <input class="w-15 text-center" type="text" id="numero" name="numero" value="0" disabled>
-                            <button class="w-7 border border-gray-600 rounded-sm bg-gray-200 hover:bg-gray-300 cursor-pointer" type="button">+</button>
+                            <button class="w-7 border border-gray-600 rounded-sm bg-gray-200 hover:bg-gray-300 active:bg-gray-400 cursor-pointer" type="button">+</button>
                         </div>
                     </div>
                     <!--CHILDREN-->
@@ -49,25 +57,15 @@
                         <h4 class="font-sans font-semibold tracking-tight text-gray-800">Children</h4>
                         <p class="font-sans  text-sm tracking-tight text-gray-500">Ages 13 or above</p>
                         <div class="flex justify-center w-31 mt-3">
-                            <button class="w-7 border border-gray-600 rounded-sm bg-gray-200 hover:bg-gray-300 cursor-pointer" type="button">-</button>
+                            <button class="w-7 border border-gray-600 rounded-sm bg-gray-200 hover:bg-gray-300 active:bg-gray-400 cursor-pointer" type="button">-</button>
                             <input class="w-15 text-center" type="text" id="numero" name="numero" value="0" disabled>
-                            <button class="w-7 border border-gray-600 rounded-sm bg-gray-200 hover:bg-gray-300 cursor-pointer" type="button">+</button>
+                            <button class="w-7 border border-gray-600 rounded-sm bg-gray-200 hover:bg-gray-300 active:bg-gray-400 cursor-pointer" type="button">+</button>
                         </div>
                     </div>
                 </div>
-                <!--UBICACIONES-->
-                <div class="bg-blue-500 w-full h-90 ">
-                    <ul class="flex flex-col gap-2">
-                        <li class="flex gap-2 ml-2 font-sans font-semibold tracking-tight text-gray-600 hover:text-gray-800 active:text-gray-950 cursor-pointer "><svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="19" height="22"><path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg> Helsinki, Finland </li>
-                        <li class="flex gap-2 ml-2 font-sans font-semibold tracking-tight text-gray-600 hover:text-gray-800 cursor-pointer "><svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="19" height="22"><path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg> Helsinki, Finland </li>
-                        <li class="flex gap-2 ml-2 font-sans font-semibold tracking-tight text-gray-600 hover:text-gray-800 cursor-pointer "><svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="19" height="22"><path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg> Helsinki, Finland </li>
-                        <li class="flex gap-2 ml-2 font-sans font-semibold tracking-tight text-gray-600 hover:text-gray-800 cursor-pointer "><svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="19" height="22"><path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg> Helsinki, Finland </li>
-                        <li class="flex gap-2 ml-2 font-sans font-semibold tracking-tight text-gray-600 hover:text-gray-800 cursor-pointer "><svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="19" height="22"><path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg> Helsinki, Finland </li>
-                    </ul>
-                </div>
             </div>
                 <!--BOTON-->
-            <div class="w-full h-20 flex justify-center items-end">
+            <div class="w-full h-20 md:h-15 flex justify-center items-end">
                 <button class=" text-white flex justify-center items-center gap-2 w-35 h-10 bg-red-500 rounded-2xl font-sans  tracking-tight border border-red-500 hover:border-gray-800 hover:bg-red-600 active:bg-red-800 cursor-pointer" type="submit">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -88,12 +86,13 @@
 
             </div>
         </div>
-            <div class="h-50 w-full bg-black/20 "></div>
+            <div class="h-60 md:h-80 w-full bg-black/30 "></div>
         </div>
     </section>
 
-    <nav class="w-full h-40 flex flex-col items-center justify-around">
-      <div class="w-7/8">
+    <nav class="w-full h-40 md:h-32 flex flex-col items-center justify-around md:flex-row md:justify-between">
+      <!--LOGO-->
+      <div class="w-7/8 md:w-1/4 md:flex md:justify-center">
         <svg
           width="96"
           height="19"
@@ -111,8 +110,9 @@
           />
         </svg>
       </div>
+      <!--BOTONES-->
       <div
-        class="border border-gray-200 h-15 w-80 rounded-2xl shadow-lg flex justify-center items-center hover:bg-gray-100"
+        class="border border-gray-200 h-15 w-80 md:mr-10 rounded-2xl shadow-lg flex justify-center items-center hover:bg-gray-100"
       >
         <span
           class="w-2/5 h-full border-r border-gray-200 rounded-l-2xl flex items-center justify-center font-sans text-gray-400 tracking-tight cursor-pointer hover:bg-gray-200 active:bg-gray-300"
@@ -143,8 +143,8 @@
       </div>
     </nav>
 
-    <section class="bg-white w-full h-full py-5 flex flex-col items-center">
-      <div class="w-9/10 flex justify-between items-center">
+    <section class="bg-white w-full h-full my-3 flex flex-col items-center">
+      <div class="w-9/10 md:w-14/15 h-15 flex justify-between items-center mb-3">
         <h2 class="font-sans font-bold text-2xl tracking-tight text-gray-700">
           Stays in Finland
         </h2>
@@ -153,9 +153,9 @@
         >
       </div>
 
-      <div class="w-9/10 h-8/10 flex justify-around flex-wrap">
+      <div class="w-9/10 md:w-14/15 h-8/10 flex justify-around md:justify-between flex-wrap gap-4" id="contenedorCards">
         <div
-          class="bg-[#eedbab] w-90 h-77 my-3 rounded-md flex flex-col items-center justify-between"
+          class="bg-[#eedbab] w-90 md:w-83 h-77 my-3 rounded-md flex flex-col items-center justify-between"
         >
           <img
             class="w-full h-60 rounded-4xl"
@@ -168,7 +168,7 @@
               class="text-gray-700 font-sans font-bold text-md border-2 rounded-xl px-3 h-7"
               >SUPERHOST</span
             >
-            <p class="font-sans w-38 text-sm text-gray-500 font-semibold">
+            <p class="font-sans w-38 md:w-35 text-sm text-gray-500 font-semibold">
               Entire house . 3 beds
             </p>
 
@@ -199,7 +199,7 @@
         </div>
 
         <div
-          class="bg-[#eedbab] w-90 h-77 my-3 rounded-md flex flex-col items-center justify-between"
+          class="bg-[#eedbab] w-90 md:w-83 h-77 my-3 rounded-md flex flex-col items-center justify-between"
         >
           <img
             class="w-full h-60 rounded-4xl"
@@ -212,7 +212,7 @@
               class="text-gray-700 font-sans font-bold text-md border-2 rounded-xl px-3 h-7"
               >SUPERHOST</span
             >
-            <p class="font-sans w-38 text-sm text-gray-500 font-semibold">
+            <p class="font-sans w-38 md:w-35 text-sm text-gray-500 font-semibold">
               Entire house . 3 beds
             </p>
 
@@ -243,7 +243,7 @@
         </div>
 
         <div
-          class="bg-[#eedbab] w-90 h-77 my-3 rounded-md flex flex-col items-center justify-between"
+          class="bg-[#eedbab] w-90 md:w-83 h-77 my-3 rounded-md flex flex-col items-center justify-between"
         >
           <img
             class="w-full h-60 rounded-4xl"
@@ -256,7 +256,7 @@
               class="text-gray-700 font-sans font-bold text-md border-2 rounded-xl px-3 h-7 hidden"
               >SUPERHOST</span
             >
-            <p class="font-sans w-38 text-sm text-gray-500 font-semibold">
+            <p class="font-sans w-38 md:w-35 text-sm text-gray-500 font-semibold">
               Entire house . 3 beds
             </p>
 
