@@ -2,7 +2,7 @@ export function cargarCards(array, element){
     element.innerHTML = ""
     array.forEach(function(task){
         let superhost = ` <span
-              class="text-gray-700 font-sans font-bold text-xs border-2 rounded-xl px-3 h-6 flex items-center"
+              class="text-gray-700 font-sans font-bold text-xs border-2 rounded-xl px-3 h-7 flex items-center"
               >SUPERHOST</span
             >`
         let bed = `. ${task.beds} beds`
@@ -14,17 +14,17 @@ export function cargarCards(array, element){
         }
         const template = 
                 `<div
-          class=" w-90 md:w-86 h-77 rounded-md flex flex-col items-center"
+          class=" w-90 md:w-86 lg:w-100 lg:mb-3 h-77 lg:h-90 rounded-md flex flex-col items-center"
         >
           <img
-            class="w-full h-60 rounded-4xl mb-2"
+            class="w-full h-60 lg:h-70 rounded-4xl mb-2"
             src="${task.photo}"
             alt="${task.title}"
           />
 
-          <div class="w-15/16 flex items-center justify-between mb-1">
+          <div class="w-15/16 lg:w-19/20 flex items-center justify-between mb-1">
             ${superhost}
-            <p class="font-sans w-42 md:w-41 text-sm text-gray-500 font-semibold">
+            <p class="font-sans w-42 md:w-41 lg:w-47 text-sm lg:text-base text-gray-500 font-semibold">
               ${task.type} ${bed}
             </p>
 
@@ -48,7 +48,7 @@ export function cargarCards(array, element){
           </div>
 
           <h5
-            class="font-sans font-semibold w-full px-3 tracking-tight"
+            class="font-sans font-semibold lg:text-lg w-full px-3 tracking-tight"
           >
             ${task.title}
           </h5>
