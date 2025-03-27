@@ -248,6 +248,9 @@
   .bottom-80 {
     bottom: calc(var(--spacing) * 80);
   }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
   .z-10 {
     z-index: 10;
   }
@@ -589,6 +592,12 @@
   .justify-center {
     justify-content: center;
   }
+  .justify-normal {
+    justify-content: normal;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
@@ -759,6 +768,9 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .pr-20 {
+    padding-right: calc(var(--spacing) * 20);
+  }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
   }
@@ -779,6 +791,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-start {
+    text-align: start;
   }
   .font-sans {
     font-family: var(--font-sans);

@@ -1,3 +1,4 @@
+//cargar todas las cartas
 export function cargarCards(array, element){
     element.innerHTML = ""
     array.forEach(function(task){
@@ -56,3 +57,4 @@ export function cargarCards(array, element){
             element.innerHTML += template
     });
 }
+
