@@ -1,3 +1,8 @@
+export const menu = document.querySelector(`#menu`)
+const guestsBox = document.querySelector(`#guests_box`)
+export const locationBox = document.querySelector(`#location_box`)
+
+
 //cargar todas las cartas
 export function cargarCards(array, element){
     element.innerHTML = ""
@@ -58,3 +63,28 @@ export function cargarCards(array, element){
     });
 }
 
+//abrir y cerrar elementos menu
+export function menuToggle(){
+  menu.classList.toggle(`hidden`)
+}
+export function openLocation(){
+  menu.classList.toggle(`hidden`)
+  locationBox.classList.toggle(`hidden`)
+}
+export function openGuests(){
+  menu.classList.toggle(`hidden`)
+  guestsBox.classList.toggle(`hidden`)
+}
+export function closeBox(){
+  menu.classList.add(`hidden`)
+  guestsBox.classList.add(`hidden`)
+  locationBox.classList.add(`hidden`)
+}
+export function guestsToggle(){
+  guestsBox.classList.toggle(`hidden`)
+  locationBox.classList.add(`hidden`)
+}
+export function locationToggle(){
+  locationBox.classList.toggle(`hidden`)
+  guestsBox.classList.add(`hidden`)
+}
