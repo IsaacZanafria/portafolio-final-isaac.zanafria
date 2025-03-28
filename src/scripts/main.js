@@ -6,8 +6,6 @@ import { openGuests } from "./utils.js";
 import { closeBox } from "./utils.js";
 import { guestsToggle } from "./utils.js";
 import { locationToggle } from "./utils.js";
-import { menu } from "./utils.js";
-import { locationBox } from "./utils.js";
 
 //CONST
 const contenedorCards = document.querySelector("#contenedorCards")
@@ -38,10 +36,12 @@ cerrar.addEventListener("click",closeBox)
 btnClose.addEventListener("click",closeBox)
 locationForm.addEventListener("click", locationToggle)
 listaLocation.addEventListener("click",opcionLocation)
+listaLocation.addEventListener("click", locationToggle)
 guestsForm.addEventListener("click", guestsToggle)
 adultsBox.addEventListener("click", adultButtons)
 childrenBox.addEventListener("click", childrenButtons)
 buttonSearch.addEventListener("click",filterStays)
+buttonSearch.addEventListener("click", closeBox)
 
 //FUNCTION
 //LOCATION
@@ -53,7 +53,6 @@ function opcionLocation(e){
         const cleanText = target.textContent.trim();
         locationInput.value = cleanText;
         locationBtn.innerHTML = cleanText;
-        locationBox.classList.toggle('hidden');
     }
 }
 
@@ -83,7 +82,6 @@ function adultButtons(e){
         guestsBtn.innerHTML = guestsInput.value
     }
 }
-
 //children
 function childrenButtons(e){
     //guestsInput.value = "0"
@@ -133,6 +131,4 @@ function filterStays(){
     span.innerHTML = "12+"
   }
   cargarCards(staysFilter, contenedorCards)
-  menu.classList.toggle(`hidden`)
-  
 }

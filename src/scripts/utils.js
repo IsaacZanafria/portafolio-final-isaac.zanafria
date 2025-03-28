@@ -1,7 +1,6 @@
-export const menu = document.querySelector(`#menu`)
+const menu = document.querySelector(`#menu`)
 const guestsBox = document.querySelector(`#guests_box`)
-export const locationBox = document.querySelector(`#location_box`)
-
+const locationBox = document.querySelector(`#location_box`)
 
 //cargar todas las cartas
 export function cargarCards(array, element){
